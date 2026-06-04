@@ -1,0 +1,33 @@
+Task-1
+
+Médecins Sans Frontières (MSF) — field operations data platform
+MSF runs humanitarian medical operations in 70+ countries. 
+They want to build a unified data platform that consolidates field clinic data — 
+patient intake forms, drug inventory logs, outbreak reports, and staff deployment records — 
+from 400 field sites into a central analytics hub for their Geneva headquarters team.
+
+Dimensions which you have to weigh to decide which Pipeline type to chose?
+
+| **Dimension**                  | **ELT (Recommended for MSF)**                                                         | **ETL (Alternative for MSF)**                                                |
+| ------------------------------ | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **Where transform happens**    | Inside centralized cloud warehouse (e.g., Snowflake using dbt after loading)          | Pre-processing at field/stream level before storing data                     |
+| **Raw data preserved?**        | Yes — all raw clinic, inventory, outbreak, and staff data stored for audit and replay | No — raw data transformed and original records may be lost                   |
+| **Latency profile**            | Batch / near real-time (suitable for HQ analytics and reporting)                      | Real-time (useful if immediate alerts from field are required)               |
+| **Transformation rigidity**    | Flexible — HQ analysts can update models as reporting requirements evolve             | Rigid — predefined transformations must be maintained across all field sites |
+| **Compute location**           | Central cloud infrastructure supporting Geneva HQ analytics hub                       | Distributed processing at edge locations or streaming clusters               |
+| **Cost driver**                | Low-cost cloud storage + on-demand compute scaling                                    | Continuous compute cost for ETL/stream-processing infrastructure             |
+| **Data governance & audit**    | Strong — critical for sensitive patient and medical records                           | Weaker — difficult to trace back to original raw data                        |
+| **Multi-source data handling** | Easily integrates data from 400 field sites into a unified platform                   | Requires complex preprocessing and mapping for each source                   |
+| **Scalability**                | Highly scalable using cloud infrastructure and warehouse compute                      | Scaling requires managing additional ETL servers and processing systems      |
+| **Best suited for MSF needs**  | Centralized                                                                           |                                                                              |
+
+
+For MSF, the most important dimensions are:
+Raw data preservation (medical records and audits)
+Data governance & security (sensitive patient information)
+Data source diversity (400 field sites)
+Transformation flexibility (changing outbreak and reporting requirements)
+Scalability (growth across countries and clinics)
+Latency requirements (analytics-focused, not millisecond real-time)
+
+These dimensions collectively indicate that ELT is the more suitable pipeline type for MSF.
