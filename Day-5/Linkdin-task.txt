@@ -1,0 +1,137 @@
+Task- 
+LinkedIn website implementation and again do this analysis of what all features can be implemented on object storage, and which one (S3 or blob storage) is best for the same.
+Determine the features which you can implement for LinkedIn profiles/feeds through object store.
+You have to chose S3 or Azure blob after brainstorming their pros and cons 
+
+Linkdin features that can be implemented using object storage
+
+--> For a LinkedIn-like application, object storage is best suited for storing large unstructured content such as profile photos, documents, videos, and feed media. 
+The database should continue to store metadata (user details, post information, likes, comments, etc.), 
+while the actual files are stored in object storage.
+
+Implemented Using Object Storage
+1. Profile Management
+Profile pictures
+Cover/banner images
+Resume/CV uploads (PDF, DOCX)
+Portfolio documents
+Certificates and badges
+
+Storage Usage
+ Store files in object storage.
+ Store file URLs and metadata in the database.
+
+
+2. LinkedIn Feed Posts
+Image posts
+Video posts
+Document posts
+Multiple media attachments per post
+
+Storage Usage
+ Upload media to object storage.
+ Serve content through CDN for faster access.
+
+3. Messaging Attachments
+Shared documents
+Images
+Videos
+Audio files
+
+Storage Usage
+Generate secure temporary URLs for downloading attachments.
+
+4. Learning and Certification Content
+Course videos
+Training materials
+Certification PDFs
+
+Storage Usage
+Large educational content can be stored efficiently.
+
+5. Company Pages
+Company logos
+Banner images
+Marketing videos
+Brochures
+
+6. Job Portal Features
+Candidate resumes
+Cover letters
+Interview documents
+Portfolio files
+
+7. Content Archive and Backup
+Historical feed media
+Deleted content recovery
+Compliance archives
+
+8. Analytics Data Export
+CSV reports
+User activity exports
+Audit logs
+
+
+Pros of Amazon S3
+
+Advantages
+Industry standard object storage.
+Excellent SDK support.
+Strong lifecycle management.
+Easy integration with:
+Amazon Web Services Lambda
+CloudFront
+Athena
+Large community and documentation.
+
+Disadvantages
+IAM policies can become complex.
+Best experience when the rest of the system is already on AWS.
+
+
+Pros of Azure Blob Storage
+
+Advantages
+Excellent integration with Microsoft Azure services.
+Native integration with:
+ Azure Active Directory
+ Azure Functions
+ Azure CDN
+Synapse Analytics
+Easier identity management for Microsoft-centric organizations.
+
+Disadvantages
+Slightly smaller ecosystem than S3.
+Fewer third-party integrations compared to AWS.
+Recommendation for LinkedIn-like Application
+
+
+Choose Amazon S3 if:
+Building a cloud-agnostic platform.
+Expecting very large media growth.
+Need mature object lifecycle management.
+Planning multi-region deployment.
+
+Choose Azure Blob Storage if:
+ Organization already uses Microsoft Azure heavily.
+ Authentication is based on Azure AD/Entra ID.
+ Most services are deployed in Azure.
+
+LinkedIn Feature	Store in S3/Blob?
+Profile Pictures	Yes
+Cover Photos	Yes
+Resumes	Yes
+Certificates	Yes
+Feed Images	Yes
+Feed Videos	Yes
+Messaging Attachments	Yes
+Company Logos	Yes
+Learning Videos	Yes
+Analytics Exports	Yes
+User Metadata	No (Database)
+Likes/Comments	No (Database)
+Connections	No (Database)
+Notifications	No (Database)
+
+For a greenfield LinkedIn implementation without any existing cloud dependency, 
+Amazon S3 would be my recommended choice.
