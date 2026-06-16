@@ -1,0 +1,26 @@
+2026-06-15 14:12:57,685 INFO    MainThread:1164 [wandb_init.py:setup_run_log_directory():723] Logging user logs to c:\Users\Administrator\EY-Training-Repo\eytraining\Day-13\wandb\run-20260615_141257-zqlb0k8i\logs\debug.log
+2026-06-15 14:12:57,686 INFO    MainThread:1164 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to c:\Users\Administrator\EY-Training-Repo\eytraining\Day-13\wandb\run-20260615_141257-zqlb0k8i\logs\debug-internal.log
+2026-06-15 14:12:57,686 INFO    MainThread:1164 [wandb_init.py:monkeypatch_ipython():642] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x00000240457A7D90>
+2026-06-15 14:12:57,686 INFO    MainThread:1164 [wandb_init.py:init():766] calling init triggers
+2026-06-15 14:12:57,686 INFO    MainThread:1164 [wandb_init.py:init():771] wandb.init called with sweep_config: {}
+config: {'model': 'claude-3-5-sonnet', 'version': '2.0', '_wandb': {}}
+2026-06-15 14:12:57,686 INFO    MainThread:1164 [wandb_init.py:init():814] starting backend
+2026-06-15 14:12:57,686 INFO    MainThread:1164 [wandb_init.py:init():829] sending inform_init request
+2026-06-15 14:12:58,216 INFO    MainThread:1164 [wandb_init.py:init():834] backend started and connected
+2026-06-15 14:12:58,219 INFO    MainThread:1164 [wandb_run.py:_label_probe_notebook():1276] probe notebook
+2026-06-15 14:12:58,219 INFO    MainThread:1164 [wandb_run.py:_label_probe_notebook():1286] Unable to probe notebook: 'charmap' codec can't decode byte 0x81 in position 90: character maps to <undefined>
+2026-06-15 14:12:58,220 INFO    MainThread:1164 [wandb_init.py:init():904] updated telemetry
+2026-06-15 14:12:58,298 INFO    MainThread:1164 [wandb_init.py:init():927] communicating run to backend with 90.0 second timeout
+2026-06-15 14:12:59,379 INFO    MainThread:1164 [wandb_init.py:init():972] starting run threads in backend
+2026-06-15 14:12:59,738 INFO    MainThread:1164 [wandb_run.py:_console_start():2523] atexit reg
+2026-06-15 14:12:59,738 INFO    MainThread:1164 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-06-15 14:12:59,738 INFO    MainThread:1164 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-06-15 14:12:59,738 INFO    MainThread:1164 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-06-15 14:12:59,740 INFO    MainThread:1164 [wandb_init.py:init():1010] run started, returning control to user process
+2026-06-15 14:13:01,253 INFO    MainThread:1164 [wandb_run.py:_finish():2285] finishing run qunnaharsabi-ai-training/finsight-prompt-eval/zqlb0k8i
+2026-06-15 14:13:01,256 INFO    MainThread:1164 [jupyter.py:save_ipynb():362] not saving jupyter notebook
+2026-06-15 14:13:01,256 INFO    MainThread:1164 [wandb_init.py:_jupyter_teardown():627] cleaning up jupyter logic
+2026-06-15 14:13:01,256 INFO    MainThread:1164 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-06-15 14:13:01,256 INFO    MainThread:1164 [wandb_run.py:_restore():2472] restore
+2026-06-15 14:13:01,257 INFO    MainThread:1164 [wandb_run.py:_restore():2478] restore done
+2026-06-15 14:13:05,531 INFO    MainThread:1164 [wandb_run.py:_footer_sync_info():3891] logging synced files

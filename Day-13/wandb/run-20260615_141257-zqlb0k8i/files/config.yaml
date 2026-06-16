@@ -1,0 +1,57 @@
+_wandb:
+    value:
+        cli_version: 0.27.2
+        e:
+            z11q5pzu5j03fgtgugxop5j07e7d1uca:
+                codePath: c:\Users\Administrator\EY-Training-Repo\eytraining\Day-13\colab2_feedback_loop.ipynb
+                codePathLocal: colab2_feedback_loop.ipynb
+                cpu_count: 4
+                cpu_count_logical: 4
+                disk:
+                    /:
+                        total: "136779730944"
+                        used: "78460960768"
+                email: qunnaharsabi@gmail.com
+                executable: c:\Users\Administrator\AppData\Local\Programs\Python\Python314\python.exe
+                git:
+                    commit: 92a63a21b71ecc7c924328c984ca15a9606e1cff
+                    remote: https://github.com/qunnaharsabi-ux/Webapp.git
+                host: 4b13af1fe8c554c
+                memory:
+                    total: "8588832768"
+                os: Windows-10-10.0.19045-SP0
+                program: c:\Users\Administrator\EY-Training-Repo\eytraining\Day-13\colab2_feedback_loop.ipynb
+                python: CPython 3.14.5
+                root: c:\Users\Administrator\EY-Training-Repo\eytraining\Day-13
+                startedAt: "2026-06-15T08:42:57.680823Z"
+                writerId: z11q5pzu5j03fgtgugxop5j07e7d1uca
+        m: []
+        python_version: 3.14.5
+        t:
+            "1":
+                - 11
+                - 49
+                - 95
+                - 97
+                - 105
+            "2":
+                - 11
+                - 49
+                - 95
+                - 97
+                - 105
+            "3":
+                - 2
+                - 16
+            "4": 3.14.5
+            "5": 0.27.2
+            "6": 5.9.0
+            "8":
+                - 1
+                - 3
+            "12": 0.27.2
+            "13": windows-amd64
+model:
+    value: claude-3-5-sonnet
+version:
+    value: "2.0"

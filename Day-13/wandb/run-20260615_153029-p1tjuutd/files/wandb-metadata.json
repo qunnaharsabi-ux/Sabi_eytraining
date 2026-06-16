@@ -1,0 +1,28 @@
+{
+  "os": "Windows-10-10.0.19045-SP0",
+  "python": "CPython 3.14.5",
+  "startedAt": "2026-06-15T10:00:29.889906Z",
+  "program": "c:\\Users\\Administrator\\EY-Training-Repo\\eytraining\\Day-13\\colab2_feedback_loop (1).ipynb",
+  "codePath": "c:\\Users\\Administrator\\EY-Training-Repo\\eytraining\\Day-13\\colab2_feedback_loop (1).ipynb",
+  "codePathLocal": "colab2_feedback_loop (1).ipynb",
+  "git": {
+    "remote": "https://github.com/qunnaharsabi-ux/Webapp.git",
+    "commit": "92a63a21b71ecc7c924328c984ca15a9606e1cff"
+  },
+  "email": "qunnaharsabi@gmail.com",
+  "root": "c:\\Users\\Administrator\\EY-Training-Repo\\eytraining\\Day-13",
+  "host": "4b13af1fe8c554c",
+  "executable": "c:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+  "cpu_count": 4,
+  "cpu_count_logical": 4,
+  "disk": {
+    "/": {
+      "total": "136779730944",
+      "used": "78504525824"
+    }
+  },
+  "memory": {
+    "total": "8588832768"
+  },
+  "writerId": "tg489twa5og7j9ty19simo7bbrulm3o1"
+}
