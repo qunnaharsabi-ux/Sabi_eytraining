@@ -1,0 +1,33 @@
+Q12. Mini Case Study (5 Marks)
+A logistics company processes 10,000 customer support emails daily. They want to: 
+(a) automatically classify each email into a category, 
+(b) retrieve relevant policy documents to generate a draft reply,
+(c) escalate complex cases to a human agent via a ticketing API.
+
+Which framework(s) would you recommend and why? Outline a high-level architecture in 4—6 bullet
+points.
+
+# Q12. Mini Case Study – Logistics Email Automation
+
+## Framework Chosen:
+
+LangChain + LlamaIndex + FastAPI
+
+### Step 1:
+Receive the customer support email and use LangChain with an LLM to automatically classify it into categories such as delivery issue, refund, payment, or damaged item.
+
+### Step 2:
+Use LlamaIndex to search the company's policy documents and retrieve the most relevant information related to the customer's query.
+
+### Step 3:
+Use LangChain to combine the customer's email and the retrieved policy information to generate a draft reply.
+
+### Step 4:
+If the issue is complex or requires human attention, use FastAPI to call the ticketing API and create a support ticket for a human agent.
+
+## Justification:
+
+LangChain is good for building AI workflows, such as email classification and response generation.
+LlamaIndex is specialized in retrieving information from company documents and knowledge bases.
+FastAPI makes it easy to integrate with external ticketing systems through APIs.
+Together, they automate customer support, improve reply accuracy, and reduce manual effort while handling large volumes of emails efficiently.
