@@ -1,0 +1,1833 @@
+[
+  {
+    "case_id": "FR-2024-3300",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "velocity_breach",
+      "beneficiary_change"
+    ],
+    "risk_score": 7.4,
+    "outcome": "escalated_human_review",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 150,000 to Singapore with signals velocity_breach, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3301",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "high_value",
+      "geo_anomaly",
+      "threshold_structuring",
+      "velocity_breach"
+    ],
+    "risk_score": 7.6,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 12,000 to Hong Kong with signals high_value, geo_anomaly, threshold_structuring, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3302",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 30000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "velocity_breach",
+      "high_value",
+      "otp_shared",
+      "dormant_reactivation"
+    ],
+    "risk_score": 3.4,
+    "outcome": "auto_closed",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 30,000 to Mauritius with signals velocity_breach, high_value, otp_shared, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3303",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "velocity_breach",
+      "new_device",
+      "threshold_structuring"
+    ],
+    "risk_score": 7.4,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 487,000 to Cyprus with signals velocity_breach, new_device, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3304",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 45000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "geo_anomaly",
+      "night_txn",
+      "threshold_structuring"
+    ],
+    "risk_score": 5.9,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 45,000 to domestic with signals geo_anomaly, night_txn, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3305",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 640000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "velocity_breach",
+      "kyc_mismatch",
+      "geo_anomaly"
+    ],
+    "risk_score": 8.5,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 640,000 to Hong Kong with signals velocity_breach, kyc_mismatch, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3306",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 45000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "night_txn",
+      "dormant_reactivation",
+      "otp_shared",
+      "high_value"
+    ],
+    "risk_score": 5.1,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 45,000 to Cayman Islands with signals night_txn, dormant_reactivation, otp_shared, high_value."
+  },
+  {
+    "case_id": "FR-2024-3307",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 640000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "geo_anomaly",
+      "otp_shared",
+      "night_txn"
+    ],
+    "risk_score": 8.3,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 640,000 to Cyprus with signals geo_anomaly, otp_shared, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3308",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "new_device",
+      "dormant_reactivation",
+      "high_value"
+    ],
+    "risk_score": 9.0,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 150,000 to Cyprus with signals new_device, dormant_reactivation, high_value."
+  },
+  {
+    "case_id": "FR-2024-3309",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "geo_anomaly",
+      "new_device",
+      "otp_shared",
+      "night_txn"
+    ],
+    "risk_score": 7.8,
+    "outcome": "escalated_human_review",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 1,200,000 to Mauritius with signals geo_anomaly, new_device, otp_shared, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3310",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "high_value",
+      "otp_shared",
+      "dormant_reactivation",
+      "threshold_structuring"
+    ],
+    "risk_score": 5.8,
+    "outcome": "auto_closed",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 12,000 to Singapore with signals high_value, otp_shared, dormant_reactivation, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3311",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "threshold_structuring",
+      "beneficiary_change",
+      "geo_anomaly"
+    ],
+    "risk_score": 3.4,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 150,000 to domestic with signals threshold_structuring, beneficiary_change, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3312",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "kyc_mismatch",
+      "new_device",
+      "beneficiary_change"
+    ],
+    "risk_score": 5.5,
+    "outcome": "auto_closed",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 90,000 to Singapore with signals kyc_mismatch, new_device, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3313",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "night_txn",
+      "threshold_structuring",
+      "high_value"
+    ],
+    "risk_score": 9.8,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 487,000 to Singapore with signals night_txn, threshold_structuring, high_value."
+  },
+  {
+    "case_id": "FR-2024-3314",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 45000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "kyc_mismatch",
+      "geo_anomaly",
+      "velocity_breach",
+      "threshold_structuring"
+    ],
+    "risk_score": 8.8,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 45,000 to Dubai (UAE) with signals kyc_mismatch, geo_anomaly, velocity_breach, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3315",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "threshold_structuring",
+      "geo_anomaly",
+      "night_txn",
+      "otp_shared"
+    ],
+    "risk_score": 4.6,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 5,000 to Nigeria with signals threshold_structuring, geo_anomaly, night_txn, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3316",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "geo_anomaly",
+      "high_value"
+    ],
+    "risk_score": 2.9,
+    "outcome": "auto_closed",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 275,000 to domestic with signals geo_anomaly, high_value."
+  },
+  {
+    "case_id": "FR-2024-3317",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "kyc_mismatch",
+      "velocity_breach"
+    ],
+    "risk_score": 8.4,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 275,000 to Dubai (UAE) with signals kyc_mismatch, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3318",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "beneficiary_change",
+      "high_value",
+      "otp_shared",
+      "geo_anomaly"
+    ],
+    "risk_score": 8.5,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 487,000 to Dubai (UAE) with signals beneficiary_change, high_value, otp_shared, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3319",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 45000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "velocity_breach",
+      "dormant_reactivation",
+      "kyc_mismatch",
+      "night_txn"
+    ],
+    "risk_score": 6.0,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 45,000 to domestic with signals velocity_breach, dormant_reactivation, kyc_mismatch, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3320",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "otp_shared",
+      "velocity_breach",
+      "night_txn"
+    ],
+    "risk_score": 2.8,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 5,000 to Hong Kong with signals otp_shared, velocity_breach, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3321",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "high_value",
+      "new_device"
+    ],
+    "risk_score": 6.3,
+    "outcome": "auto_closed",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 90,000 to Nigeria with signals high_value, new_device."
+  },
+  {
+    "case_id": "FR-2024-3322",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 30000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "high_value",
+      "threshold_structuring",
+      "otp_shared"
+    ],
+    "risk_score": 5.4,
+    "outcome": "auto_closed",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 30,000 to Singapore with signals high_value, threshold_structuring, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3323",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "dormant_reactivation",
+      "kyc_mismatch",
+      "high_value",
+      "velocity_breach"
+    ],
+    "risk_score": 7.2,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 150,000 to Singapore with signals dormant_reactivation, kyc_mismatch, high_value, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3324",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 45000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "high_value",
+      "otp_shared",
+      "night_txn",
+      "velocity_breach"
+    ],
+    "risk_score": 3.4,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 45,000 to Cayman Islands with signals high_value, otp_shared, night_txn, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3325",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "geo_anomaly",
+      "high_value",
+      "otp_shared"
+    ],
+    "risk_score": 7.6,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 275,000 to Nigeria with signals geo_anomaly, high_value, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3326",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "night_txn",
+      "kyc_mismatch",
+      "otp_shared",
+      "threshold_structuring"
+    ],
+    "risk_score": 7.5,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 1,200,000 to Mauritius with signals night_txn, kyc_mismatch, otp_shared, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3327",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "threshold_structuring",
+      "dormant_reactivation",
+      "night_txn",
+      "otp_shared"
+    ],
+    "risk_score": 8.9,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 1,200,000 to Cayman Islands with signals threshold_structuring, dormant_reactivation, night_txn, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3328",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "velocity_breach",
+      "threshold_structuring"
+    ],
+    "risk_score": 7.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 487,000 to Hong Kong with signals velocity_breach, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3329",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "kyc_mismatch",
+      "new_device",
+      "threshold_structuring",
+      "geo_anomaly"
+    ],
+    "risk_score": 7.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 275,000 to Nigeria with signals kyc_mismatch, new_device, threshold_structuring, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3330",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 30000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "high_value",
+      "geo_anomaly",
+      "velocity_breach"
+    ],
+    "risk_score": 9.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 30,000 to Cayman Islands with signals high_value, geo_anomaly, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3331",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "new_device",
+      "threshold_structuring"
+    ],
+    "risk_score": 7.6,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 1,200,000 to Nigeria with signals new_device, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3332",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "new_device",
+      "threshold_structuring"
+    ],
+    "risk_score": 3.6,
+    "outcome": "auto_closed",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 12,000 to Mauritius with signals new_device, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3333",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "beneficiary_change",
+      "threshold_structuring",
+      "kyc_mismatch"
+    ],
+    "risk_score": 3.7,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 90,000 to Singapore with signals beneficiary_change, threshold_structuring, kyc_mismatch."
+  },
+  {
+    "case_id": "FR-2024-3334",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "high_value",
+      "velocity_breach",
+      "dormant_reactivation",
+      "night_txn"
+    ],
+    "risk_score": 4.5,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 12,000 to Nigeria with signals high_value, velocity_breach, dormant_reactivation, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3335",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "new_device",
+      "velocity_breach",
+      "geo_anomaly",
+      "threshold_structuring"
+    ],
+    "risk_score": 8.7,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 90,000 to Hong Kong with signals new_device, velocity_breach, geo_anomaly, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3336",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "threshold_structuring",
+      "geo_anomaly"
+    ],
+    "risk_score": 4.8,
+    "outcome": "auto_closed",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 5,000 to Singapore with signals threshold_structuring, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3337",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "geo_anomaly",
+      "threshold_structuring",
+      "dormant_reactivation",
+      "new_device"
+    ],
+    "risk_score": 3.5,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 150,000 to domestic with signals geo_anomaly, threshold_structuring, dormant_reactivation, new_device."
+  },
+  {
+    "case_id": "FR-2024-3338",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "beneficiary_change",
+      "kyc_mismatch"
+    ],
+    "risk_score": 7.0,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 487,000 to Hong Kong with signals beneficiary_change, kyc_mismatch."
+  },
+  {
+    "case_id": "FR-2024-3339",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "geo_anomaly",
+      "night_txn",
+      "otp_shared",
+      "beneficiary_change"
+    ],
+    "risk_score": 9.6,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 275,000 to Dubai (UAE) with signals geo_anomaly, night_txn, otp_shared, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3340",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "dormant_reactivation",
+      "beneficiary_change"
+    ],
+    "risk_score": 5.8,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 90,000 to Nigeria with signals dormant_reactivation, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3341",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 30000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "night_txn",
+      "high_value",
+      "velocity_breach"
+    ],
+    "risk_score": 6.2,
+    "outcome": "auto_closed",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 30,000 to Cyprus with signals night_txn, high_value, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3342",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 45000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "beneficiary_change",
+      "geo_anomaly"
+    ],
+    "risk_score": 3.6,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 45,000 to Dubai (UAE) with signals beneficiary_change, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3343",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "dormant_reactivation",
+      "otp_shared"
+    ],
+    "risk_score": 7.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 275,000 to Nigeria with signals dormant_reactivation, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3344",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "geo_anomaly",
+      "threshold_structuring"
+    ],
+    "risk_score": 7.0,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 275,000 to Cayman Islands with signals geo_anomaly, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3345",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "beneficiary_change",
+      "new_device"
+    ],
+    "risk_score": 8.6,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 1,200,000 to Mauritius with signals beneficiary_change, new_device."
+  },
+  {
+    "case_id": "FR-2024-3346",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "new_device",
+      "high_value"
+    ],
+    "risk_score": 4.8,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 12,000 to domestic with signals new_device, high_value."
+  },
+  {
+    "case_id": "FR-2024-3347",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "new_device",
+      "velocity_breach",
+      "beneficiary_change"
+    ],
+    "risk_score": 9.5,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 487,000 to Cayman Islands with signals new_device, velocity_breach, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3348",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 30000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "otp_shared",
+      "geo_anomaly",
+      "dormant_reactivation",
+      "threshold_structuring"
+    ],
+    "risk_score": 6.4,
+    "outcome": "auto_closed",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 30,000 to Mauritius with signals otp_shared, geo_anomaly, dormant_reactivation, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3349",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "otp_shared",
+      "new_device"
+    ],
+    "risk_score": 2.6,
+    "outcome": "auto_closed",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 90,000 to Mauritius with signals otp_shared, new_device."
+  },
+  {
+    "case_id": "FR-2024-3350",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "threshold_structuring",
+      "otp_shared",
+      "beneficiary_change"
+    ],
+    "risk_score": 4.0,
+    "outcome": "auto_closed",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 90,000 to Hong Kong with signals threshold_structuring, otp_shared, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3351",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "otp_shared",
+      "night_txn",
+      "kyc_mismatch"
+    ],
+    "risk_score": 9.3,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 487,000 to Cyprus with signals otp_shared, night_txn, kyc_mismatch."
+  },
+  {
+    "case_id": "FR-2024-3352",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "otp_shared",
+      "velocity_breach"
+    ],
+    "risk_score": 7.9,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 150,000 to Mauritius with signals otp_shared, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3353",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 30000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "beneficiary_change",
+      "dormant_reactivation"
+    ],
+    "risk_score": 5.2,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 30,000 to Mauritius with signals beneficiary_change, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3354",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "dormant_reactivation",
+      "velocity_breach",
+      "geo_anomaly",
+      "new_device"
+    ],
+    "risk_score": 7.1,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 90,000 to Cyprus with signals dormant_reactivation, velocity_breach, geo_anomaly, new_device."
+  },
+  {
+    "case_id": "FR-2024-3355",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "dormant_reactivation",
+      "night_txn",
+      "threshold_structuring"
+    ],
+    "risk_score": 4.0,
+    "outcome": "auto_closed",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 5,000 to Hong Kong with signals dormant_reactivation, night_txn, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3356",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 640000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "beneficiary_change",
+      "velocity_breach"
+    ],
+    "risk_score": 8.5,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 640,000 to Cayman Islands with signals beneficiary_change, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3357",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "otp_shared",
+      "dormant_reactivation",
+      "threshold_structuring",
+      "velocity_breach"
+    ],
+    "risk_score": 5.2,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 487,000 to domestic with signals otp_shared, dormant_reactivation, threshold_structuring, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3358",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 640000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "beneficiary_change",
+      "high_value",
+      "night_txn",
+      "dormant_reactivation"
+    ],
+    "risk_score": 4.1,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 640,000 to domestic with signals beneficiary_change, high_value, night_txn, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3359",
+    "category": "wire_fraud",
+    "playbook": "P-07",
+    "amount": 640000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "new_device",
+      "otp_shared",
+      "threshold_structuring",
+      "dormant_reactivation"
+    ],
+    "risk_score": 8.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Beneficiary frozen, SWIFT recall initiated, STR filed.",
+    "summary": "Wire Fraud of INR 640,000 to Dubai (UAE) with signals new_device, otp_shared, threshold_structuring, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3360",
+    "category": "wire_fraud",
+    "playbook": "P-07",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "high_value",
+      "velocity_breach",
+      "beneficiary_change"
+    ],
+    "risk_score": 8.2,
+    "outcome": "escalated_human_review",
+    "resolution": "Beneficiary frozen, SWIFT recall initiated, STR filed.",
+    "summary": "Wire Fraud of INR 275,000 to Singapore with signals high_value, velocity_breach, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3361",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "dormant_reactivation",
+      "kyc_mismatch",
+      "high_value",
+      "otp_shared"
+    ],
+    "risk_score": 9.2,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 150,000 to Nigeria with signals dormant_reactivation, kyc_mismatch, high_value, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3362",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "new_device",
+      "geo_anomaly",
+      "beneficiary_change",
+      "kyc_mismatch"
+    ],
+    "risk_score": 2.9,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 5,000 to domestic with signals new_device, geo_anomaly, beneficiary_change, kyc_mismatch."
+  },
+  {
+    "case_id": "FR-2024-3363",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "beneficiary_change",
+      "otp_shared"
+    ],
+    "risk_score": 7.1,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 150,000 to Dubai (UAE) with signals beneficiary_change, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3364",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 640000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "night_txn",
+      "geo_anomaly",
+      "kyc_mismatch"
+    ],
+    "risk_score": 9.0,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 640,000 to Singapore with signals night_txn, geo_anomaly, kyc_mismatch."
+  },
+  {
+    "case_id": "FR-2024-3365",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "threshold_structuring",
+      "otp_shared",
+      "new_device"
+    ],
+    "risk_score": 5.6,
+    "outcome": "auto_closed",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 12,000 to Hong Kong with signals threshold_structuring, otp_shared, new_device."
+  },
+  {
+    "case_id": "FR-2024-3366",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "high_value",
+      "kyc_mismatch"
+    ],
+    "risk_score": 6.2,
+    "outcome": "auto_closed",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 12,000 to Singapore with signals high_value, kyc_mismatch."
+  },
+  {
+    "case_id": "FR-2024-3367",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "new_device",
+      "kyc_mismatch",
+      "dormant_reactivation"
+    ],
+    "risk_score": 9.3,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 1,200,000 to Mauritius with signals new_device, kyc_mismatch, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3368",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "new_device",
+      "kyc_mismatch",
+      "high_value"
+    ],
+    "risk_score": 9.4,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 275,000 to Singapore with signals new_device, kyc_mismatch, high_value."
+  },
+  {
+    "case_id": "FR-2024-3369",
+    "category": "wire_fraud",
+    "playbook": "P-07",
+    "amount": 45000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "kyc_mismatch",
+      "otp_shared",
+      "beneficiary_change",
+      "high_value"
+    ],
+    "risk_score": 3.4,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Wire Fraud of INR 45,000 to Cyprus with signals kyc_mismatch, otp_shared, beneficiary_change, high_value."
+  },
+  {
+    "case_id": "FR-2024-3370",
+    "category": "wire_fraud",
+    "playbook": "P-07",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "high_value",
+      "geo_anomaly",
+      "new_device"
+    ],
+    "risk_score": 4.0,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Wire Fraud of INR 90,000 to Singapore with signals high_value, geo_anomaly, new_device."
+  },
+  {
+    "case_id": "FR-2024-3371",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "otp_shared",
+      "geo_anomaly",
+      "threshold_structuring",
+      "night_txn"
+    ],
+    "risk_score": 8.2,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 487,000 to Nigeria with signals otp_shared, geo_anomaly, threshold_structuring, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3372",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "threshold_structuring",
+      "velocity_breach",
+      "night_txn"
+    ],
+    "risk_score": 9.6,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 1,200,000 to Cayman Islands with signals threshold_structuring, velocity_breach, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3373",
+    "category": "wire_fraud",
+    "playbook": "P-07",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "threshold_structuring",
+      "high_value",
+      "otp_shared"
+    ],
+    "risk_score": 7.8,
+    "outcome": "escalated_human_review",
+    "resolution": "Beneficiary frozen, SWIFT recall initiated, STR filed.",
+    "summary": "Wire Fraud of INR 1,200,000 to Singapore with signals threshold_structuring, high_value, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3374",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 640000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "threshold_structuring",
+      "dormant_reactivation"
+    ],
+    "risk_score": 9.4,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 640,000 to Dubai (UAE) with signals threshold_structuring, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3375",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "high_value",
+      "velocity_breach",
+      "threshold_structuring",
+      "beneficiary_change"
+    ],
+    "risk_score": 2.8,
+    "outcome": "auto_closed",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 5,000 to Cayman Islands with signals high_value, velocity_breach, threshold_structuring, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3376",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "kyc_mismatch",
+      "new_device"
+    ],
+    "risk_score": 4.0,
+    "outcome": "auto_closed",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 12,000 to Cyprus with signals kyc_mismatch, new_device."
+  },
+  {
+    "case_id": "FR-2024-3377",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "dormant_reactivation",
+      "night_txn",
+      "threshold_structuring"
+    ],
+    "risk_score": 7.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 275,000 to Mauritius with signals dormant_reactivation, night_txn, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3378",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "velocity_breach",
+      "high_value",
+      "night_txn"
+    ],
+    "risk_score": 8.8,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 487,000 to Singapore with signals velocity_breach, high_value, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3379",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "velocity_breach",
+      "night_txn",
+      "otp_shared",
+      "geo_anomaly"
+    ],
+    "risk_score": 7.7,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 12,000 to Dubai (UAE) with signals velocity_breach, night_txn, otp_shared, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3380",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "geo_anomaly",
+      "otp_shared",
+      "kyc_mismatch",
+      "dormant_reactivation"
+    ],
+    "risk_score": 3.2,
+    "outcome": "auto_closed",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 275,000 to domestic with signals geo_anomaly, otp_shared, kyc_mismatch, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3381",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "geo_anomaly",
+      "new_device",
+      "beneficiary_change",
+      "velocity_breach"
+    ],
+    "risk_score": 9.6,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 5,000 to Cayman Islands with signals geo_anomaly, new_device, beneficiary_change, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3382",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "threshold_structuring",
+      "night_txn",
+      "otp_shared",
+      "velocity_breach"
+    ],
+    "risk_score": 2.9,
+    "outcome": "auto_closed",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 5,000 to Singapore with signals threshold_structuring, night_txn, otp_shared, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3383",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "night_txn",
+      "geo_anomaly",
+      "velocity_breach"
+    ],
+    "risk_score": 8.9,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 487,000 to Mauritius with signals night_txn, geo_anomaly, velocity_breach."
+  },
+  {
+    "case_id": "FR-2024-3384",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "dormant_reactivation",
+      "velocity_breach",
+      "threshold_structuring",
+      "kyc_mismatch"
+    ],
+    "risk_score": 8.2,
+    "outcome": "escalated_human_review",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 1,200,000 to Hong Kong with signals dormant_reactivation, velocity_breach, threshold_structuring, kyc_mismatch."
+  },
+  {
+    "case_id": "FR-2024-3385",
+    "category": "wire_fraud",
+    "playbook": "P-07",
+    "amount": 30000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "kyc_mismatch",
+      "new_device",
+      "threshold_structuring",
+      "geo_anomaly"
+    ],
+    "risk_score": 5.0,
+    "outcome": "auto_closed",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Wire Fraud of INR 30,000 to Cyprus with signals kyc_mismatch, new_device, threshold_structuring, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3386",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "kyc_mismatch",
+      "threshold_structuring",
+      "beneficiary_change"
+    ],
+    "risk_score": 9.3,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 487,000 to Singapore with signals kyc_mismatch, threshold_structuring, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3387",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Mauritius",
+    "signals": [
+      "kyc_mismatch",
+      "otp_shared",
+      "night_txn"
+    ],
+    "risk_score": 3.8,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 5,000 to Mauritius with signals kyc_mismatch, otp_shared, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3388",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "new_device",
+      "kyc_mismatch",
+      "otp_shared"
+    ],
+    "risk_score": 8.0,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 487,000 to Cyprus with signals new_device, kyc_mismatch, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3389",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "beneficiary_change",
+      "high_value",
+      "velocity_breach",
+      "night_txn"
+    ],
+    "risk_score": 7.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 150,000 to Hong Kong with signals beneficiary_change, high_value, velocity_breach, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3390",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "high_value",
+      "otp_shared",
+      "kyc_mismatch"
+    ],
+    "risk_score": 9.2,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 1,200,000 to Nigeria with signals high_value, otp_shared, kyc_mismatch."
+  },
+  {
+    "case_id": "FR-2024-3391",
+    "category": "card_fraud",
+    "playbook": "P-01",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "otp_shared",
+      "threshold_structuring",
+      "night_txn"
+    ],
+    "risk_score": 4.4,
+    "outcome": "auto_closed",
+    "resolution": "Card blocked and chargeback raised.",
+    "summary": "Card Fraud of INR 275,000 to domestic with signals otp_shared, threshold_structuring, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3392",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "threshold_structuring",
+      "high_value",
+      "dormant_reactivation"
+    ],
+    "risk_score": 7.8,
+    "outcome": "escalated_human_review",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 487,000 to Nigeria with signals threshold_structuring, high_value, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3393",
+    "category": "wire_fraud",
+    "playbook": "P-07",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "geo_anomaly",
+      "otp_shared"
+    ],
+    "risk_score": 9.1,
+    "outcome": "escalated_human_review",
+    "resolution": "Beneficiary frozen, SWIFT recall initiated, STR filed.",
+    "summary": "Wire Fraud of INR 487,000 to Hong Kong with signals geo_anomaly, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3394",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "new_device",
+      "otp_shared",
+      "high_value",
+      "dormant_reactivation"
+    ],
+    "risk_score": 9.0,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 1,200,000 to Cyprus with signals new_device, otp_shared, high_value, dormant_reactivation."
+  },
+  {
+    "case_id": "FR-2024-3395",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "night_txn",
+      "beneficiary_change",
+      "geo_anomaly",
+      "threshold_structuring"
+    ],
+    "risk_score": 7.6,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 150,000 to Cyprus with signals night_txn, beneficiary_change, geo_anomaly, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3396",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "velocity_breach",
+      "high_value",
+      "new_device"
+    ],
+    "risk_score": 9.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 275,000 to Cayman Islands with signals velocity_breach, high_value, new_device."
+  },
+  {
+    "case_id": "FR-2024-3397",
+    "category": "phishing",
+    "playbook": "P-04",
+    "amount": 12000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "new_device",
+      "kyc_mismatch",
+      "geo_anomaly"
+    ],
+    "risk_score": 4.4,
+    "outcome": "auto_closed",
+    "resolution": "Customer educated, beneficiary blacklisted.",
+    "summary": "Phishing of INR 12,000 to Cyprus with signals new_device, kyc_mismatch, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3398",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "new_device",
+      "velocity_breach",
+      "beneficiary_change"
+    ],
+    "risk_score": 9.3,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 1,200,000 to Hong Kong with signals new_device, velocity_breach, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3399",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "geo_anomaly",
+      "velocity_breach",
+      "new_device"
+    ],
+    "risk_score": 7.2,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 90,000 to Cyprus with signals geo_anomaly, velocity_breach, new_device."
+  },
+  {
+    "case_id": "FR-2024-3400",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 5000,
+    "currency": "INR",
+    "destination": "Singapore",
+    "signals": [
+      "high_value",
+      "threshold_structuring"
+    ],
+    "risk_score": 5.6,
+    "outcome": "auto_closed",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 5,000 to Singapore with signals high_value, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3401",
+    "category": "mule_account",
+    "playbook": "P-03",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "kyc_mismatch",
+      "beneficiary_change",
+      "threshold_structuring"
+    ],
+    "risk_score": 8.7,
+    "outcome": "escalated_human_review",
+    "resolution": "Debit freeze + STR filed with FIU-IND.",
+    "summary": "Mule Account of INR 275,000 to Cayman Islands with signals kyc_mismatch, beneficiary_change, threshold_structuring."
+  },
+  {
+    "case_id": "FR-2024-3402",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "otp_shared",
+      "night_txn"
+    ],
+    "risk_score": 7.4,
+    "outcome": "escalated_human_review",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 275,000 to Hong Kong with signals otp_shared, night_txn."
+  },
+  {
+    "case_id": "FR-2024-3403",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Nigeria",
+    "signals": [
+      "geo_anomaly",
+      "new_device",
+      "velocity_breach",
+      "otp_shared"
+    ],
+    "risk_score": 7.8,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 1,200,000 to Nigeria with signals geo_anomaly, new_device, velocity_breach, otp_shared."
+  },
+  {
+    "case_id": "FR-2024-3404",
+    "category": "account_takeover",
+    "playbook": "P-02",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "beneficiary_change",
+      "kyc_mismatch",
+      "geo_anomaly"
+    ],
+    "risk_score": 9.2,
+    "outcome": "escalated_human_review",
+    "resolution": "Digital channels frozen, credentials reset.",
+    "summary": "Account Takeover of INR 150,000 to Cyprus with signals beneficiary_change, kyc_mismatch, geo_anomaly."
+  },
+  {
+    "case_id": "FR-2024-3405",
+    "category": "upi_fraud",
+    "playbook": "P-05",
+    "amount": 150000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "otp_shared",
+      "threshold_structuring",
+      "geo_anomaly",
+      "beneficiary_change"
+    ],
+    "risk_score": 9.5,
+    "outcome": "escalated_human_review",
+    "resolution": "Disputed via NPCI, VPA blocked.",
+    "summary": "Upi Fraud of INR 150,000 to Dubai (UAE) with signals otp_shared, threshold_structuring, geo_anomaly, beneficiary_change."
+  },
+  {
+    "case_id": "FR-2024-3406",
+    "category": "synthetic_identity",
+    "playbook": "P-08",
+    "amount": 90000,
+    "currency": "INR",
+    "destination": "Cyprus",
+    "signals": [
+      "geo_anomaly",
+      "velocity_breach"
+    ],
+    "risk_score": 8.7,
+    "outcome": "escalated_human_review",
+    "resolution": "KYC re-verified, disbursement held.",
+    "summary": "Synthetic Identity of INR 90,000 to Cyprus with signals geo_anomaly, velocity_breach."
+  }
+]

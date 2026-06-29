@@ -1,0 +1,69 @@
+[
+  {
+    "alert_id": "FR-2025-8821",
+    "account": "****4729",
+    "amount": 487000,
+    "currency": "INR",
+    "destination": "Cayman Islands",
+    "signals": [
+      "velocity_breach",
+      "geo_anomaly",
+      "new_device"
+    ],
+    "sla_minutes": 120,
+    "channel": "wire"
+  },
+  {
+    "alert_id": "FR-2025-8822",
+    "account": "****1183",
+    "amount": 12500,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "new_device"
+    ],
+    "sla_minutes": 240,
+    "channel": "upi"
+  },
+  {
+    "alert_id": "FR-2025-8823",
+    "account": "****9920",
+    "amount": 275000,
+    "currency": "INR",
+    "destination": "Dubai (UAE)",
+    "signals": [
+      "otp_shared",
+      "beneficiary_change"
+    ],
+    "sla_minutes": 120,
+    "channel": "wire"
+  },
+  {
+    "alert_id": "FR-2025-8824",
+    "account": "****3351",
+    "amount": 92000,
+    "currency": "INR",
+    "destination": "domestic",
+    "signals": [
+      "dormant_reactivation",
+      "threshold_structuring"
+    ],
+    "sla_minutes": 180,
+    "channel": "neft"
+  },
+  {
+    "alert_id": "FR-2025-8825",
+    "account": "****7766",
+    "amount": 1200000,
+    "currency": "INR",
+    "destination": "Hong Kong",
+    "signals": [
+      "velocity_breach",
+      "geo_anomaly",
+      "high_value",
+      "night_txn"
+    ],
+    "sla_minutes": 120,
+    "channel": "swift"
+  }
+]

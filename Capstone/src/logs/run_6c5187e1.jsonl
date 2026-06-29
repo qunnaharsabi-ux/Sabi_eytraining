@@ -1,0 +1,28 @@
+{"timestamp": "2026-06-29T14:09:45.254049Z", "run_id": "6c5187e1", "event": "pipeline.start", "level": "info", "alert_id": "FR-2025-8823", "trigger_len": 206, "env": "dev"}
+{"timestamp": "2026-06-29T14:09:45.503845Z", "run_id": "6c5187e1", "event": "incident.parsed", "level": "info", "category": "wire_fraud", "amount": 275000}
+{"timestamp": "2026-06-29T14:09:45.504817Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "incident_agent", "duration_s": 0.247, "tokens": 335}
+{"timestamp": "2026-06-29T14:09:45.790333Z", "run_id": "6c5187e1", "event": "supervisor.decision", "level": "info", "next": "SEARCH", "reason": "Live web intelligence is required to start the investigation.", "iteration": 0}
+{"timestamp": "2026-06-29T14:09:45.793727Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.287, "tokens": 335}
+{"timestamp": "2026-06-29T14:09:47.949575Z", "run_id": "6c5187e1", "event": "search.done", "level": "info", "live": true, "query": "bank fraud wire_fraud Dubai (UAE) RBI SWIFT recall regulatory deadline otp_shared beneficiary_change"}
+{"timestamp": "2026-06-29T14:09:47.951567Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "search_agent", "duration_s": 2.155, "tokens": 1129}
+{"timestamp": "2026-06-29T14:09:48.280581Z", "run_id": "6c5187e1", "event": "supervisor.decision", "level": "info", "next": "RAG", "reason": "SEARCH has already run, now we need precedent cases and playbooks.", "iteration": 1}
+{"timestamp": "2026-06-29T14:09:48.280581Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.332, "tokens": 1129}
+{"timestamp": "2026-06-29T14:09:48.360083Z", "run_id": "6c5187e1", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3359", "similarity": 0.684, "source": "past_case"}
+{"timestamp": "2026-06-29T14:09:48.362090Z", "run_id": "6c5187e1", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3405", "similarity": 0.648, "source": "past_case"}
+{"timestamp": "2026-06-29T14:09:48.363088Z", "run_id": "6c5187e1", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3369", "similarity": 0.619, "source": "past_case"}
+{"timestamp": "2026-06-29T14:09:48.364106Z", "run_id": "6c5187e1", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3318", "similarity": 0.607, "source": "past_case"}
+{"timestamp": "2026-06-29T14:09:48.365107Z", "run_id": "6c5187e1", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3363", "similarity": 0.599, "source": "past_case"}
+{"timestamp": "2026-06-29T14:09:49.237436Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "rag_agent", "duration_s": 0.95, "tokens": 943}
+{"timestamp": "2026-06-29T14:09:49.499393Z", "run_id": "6c5187e1", "event": "supervisor.decision", "level": "info", "next": "READER", "reason": "A document was uploaded and READER has not run yet", "iteration": 2}
+{"timestamp": "2026-06-29T14:09:49.499393Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.272, "tokens": 943}
+{"timestamp": "2026-06-29T14:09:49.514935Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "reader_agent", "duration_s": 0.0, "tokens": 0}
+{"timestamp": "2026-06-29T14:09:49.733682Z", "run_id": "6c5187e1", "event": "supervisor.decision", "level": "info", "next": "WRITE", "reason": "All initial agents have run.", "iteration": 3}
+{"timestamp": "2026-06-29T14:09:49.733682Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.23, "tokens": 0}
+{"timestamp": "2026-06-29T14:09:50.744675Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "report_agent", "risk_score": 8.5, "tokens": 1574}
+{"timestamp": "2026-06-29T14:09:50.745641Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "report_agent", "duration_s": 0.997, "tokens": 1574}
+{"timestamp": "2026-06-29T14:09:51.046484Z", "run_id": "6c5187e1", "event": "evaluator.decision", "level": "info", "approved": true, "score": 8.5, "flags": []}
+{"timestamp": "2026-06-29T14:09:51.062514Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "evaluator_agent", "duration_s": 0.316, "tokens": 1490}
+{"timestamp": "2026-06-29T14:09:51.062514Z", "run_id": "6c5187e1", "event": "supervisor.decision", "level": "info", "next": "END", "reason": "Evaluator approved the report", "iteration": 4}
+{"timestamp": "2026-06-29T14:09:51.062514Z", "run_id": "6c5187e1", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.002, "tokens": 1490}
+{"timestamp": "2026-06-29T14:09:51.084321Z", "run_id": "6c5187e1", "event": "ragas.scored", "level": "info", "claims": 7, "faithfulness": 1.0, "answer_relevance": 1.0, "context_recall": 0.831}
+{"timestamp": "2026-06-29T14:09:51.085319Z", "run_id": "6c5187e1", "event": "pipeline.complete", "level": "info", "iterations": 5, "total_tokens": 1574, "risk_score": 8.5, "duration_s": 5.83, "approved": true, "decision": "human_review"}

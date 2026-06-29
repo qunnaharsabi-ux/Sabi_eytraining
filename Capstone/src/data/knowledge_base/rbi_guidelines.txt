@@ -1,0 +1,46 @@
+RBI & REGULATORY GUIDELINES (summarised for FIAA knowledge base)
+================================================================
+Note: This is an educational summary for a capstone project, not legal advice.
+
+RBI MASTER DIRECTION — FRAUD RISK MANAGEMENT
+Banks must have a board-approved fraud risk management policy. Frauds must be
+classified, reported to the RBI through the prescribed returns, and reviewed by
+the board's special committee. Early-warning signals must trigger investigation.
+
+REPORTING TIMELINES
+- Frauds of Rs 1 lakh and above: report to RBI within the prescribed window after
+  detection through the central fraud reporting system.
+- Suspicious Transaction Reports (STRs) are filed with FIU-IND under the PMLA when
+  a transaction appears linked to proceeds of crime, regardless of amount.
+- Cash Transaction Reports (CTRs) cover aggregated cash above the threshold.
+
+CUSTOMER LIABILITY (Limited Liability Circular)
+- Zero liability for the customer where the loss is due to bank negligence or a
+  third-party breach reported within 3 working days.
+- Limited liability applies on a sliding scale for delayed reporting.
+- The burden of proving customer liability rests with the bank.
+
+DIGITAL PAYMENT SECURITY CONTROLS
+Banks must implement multi-factor authentication, transaction velocity controls,
+device binding, and real-time fraud monitoring. Adaptive authentication should
+step up for anomalous behaviour such as new devices or unusual geolocation.
+
+CROSS-BORDER & SWIFT
+For unauthorised cross-border wires, time is critical: the SWIFT recall request
+should be initiated immediately (commonly within a ~2 hour operational window)
+through the correspondent banking channel. Beneficiary-side freezes depend on the
+receiving jurisdiction's cooperation, so speed materially affects recovery.
+
+KYC / AML
+Customer Due Diligence (CDD) must be risk-based. Enhanced Due Diligence (EDD)
+applies to high-risk customers and to transactions involving high-risk corridors.
+Periodic re-KYC is mandatory; mismatched or thin KYC is an onboarding red flag.
+
+HIGH-RISK CORRIDORS
+Transfers to jurisdictions flagged by FATF or with weak AML enforcement warrant
+enhanced scrutiny. A high-value transfer to such a corridor, combined with
+behavioural anomalies, is a strong indicator of layering.
+
+GRIEVANCE & TURNAROUND
+Disputed electronic transactions must be resolved within the regulator-specified
+turnaround time; failure attracts compensation obligations to the customer.

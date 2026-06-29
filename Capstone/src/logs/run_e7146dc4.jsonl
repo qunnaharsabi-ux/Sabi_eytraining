@@ -1,0 +1,2 @@
+{"timestamp": "2026-06-29T15:13:19.901615Z", "run_id": "e7146dc4", "event": "pipeline.start", "level": "info", "alert_id": "FR-INJ-687", "trigger_len": 240, "env": "dev"}
+{"timestamp": "2026-06-29T15:13:19.911897Z", "run_id": "e7146dc4", "event": "guardrail.injection_blocked", "level": "warning", "pattern": "system prompt"}
