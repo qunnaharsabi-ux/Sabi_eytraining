@@ -1,0 +1,62 @@
+FRAUD RESPONSE PLAYBOOKS — Fraud Intelligence AI Assistant
+==========================================================
+
+PLAYBOOK P-01 — Card-Not-Present (CNP) Fraud
+Trigger signals: multiple declined CVV attempts, foreign merchant, small test
+transaction followed by large purchase. Procedure: block the card immediately,
+reverse the disputed authorisation, raise a chargeback, notify the cardholder
+through a verified channel, and file an internal fraud ticket. Regulatory: report
+to RBI under the master direction on customer protection if customer is liable
+for zero amount when reported within 3 working days.
+
+PLAYBOOK P-02 — Account Takeover (ATO)
+Trigger signals: new device login, password + beneficiary change within minutes,
+disabled SMS alerts, login from anomalous geolocation. Procedure: freeze digital
+channels, force credential reset over a verified channel, reverse beneficiary
+changes, review last 30 days of transactions, and escalate to the fraud desk.
+ATO combined with an immediate high-value transfer is always HIGH risk.
+
+PLAYBOOK P-03 — Mule Account Detection
+Trigger signals: dormant account suddenly receiving and forwarding funds, many
+small credits aggregated then wired out, beneficiary is a recently opened account.
+Procedure: place a debit freeze, flag the beneficiary network, file a Suspicious
+Transaction Report (STR) with FIU-IND, and preserve the transaction graph for
+investigators.
+
+PLAYBOOK P-04 — Phishing / Vishing Compromise
+Trigger signals: customer reports sharing OTP, transaction shortly after an
+inbound call, beneficiary added during the suspected call window. Procedure:
+reverse where possible, educate the customer, reset credentials, and capture the
+fraudster's collection account for blacklisting.
+
+PLAYBOOK P-05 — UPI Collect / QR Fraud
+Trigger signals: collect requests disguised as payments, QR scan that debits
+instead of credits. Procedure: dispute through NPCI, block the VPA, and warn the
+customer about collect-request semantics.
+
+PLAYBOOK P-06 — Velocity / Structuring
+Trigger signals: many transactions just under a reporting threshold within a short
+window (smurfing). Procedure: aggregate across accounts, evaluate for structuring,
+and file an STR if the pattern indicates deliberate threshold avoidance.
+
+PLAYBOOK P-07 — Cross-Border Wire / Layering
+Trigger signals: large transfer to a high-risk corridor, velocity breach, geo
+anomaly, new device. Procedure: freeze the beneficiary account, initiate a SWIFT
+recall WITHIN THE 2-HOUR WINDOW, file an STR with FIU-IND, and notify the
+correspondent bank with full case details. This is the highest-urgency playbook;
+the SWIFT recall window is unforgiving and lost time is lost money.
+
+PLAYBOOK P-08 — Synthetic Identity
+Trigger signals: thin-file applicant, mismatched KYC documents, address shared by
+many accounts. Procedure: re-verify KYC, hold disbursement, and refer to the
+onboarding risk team.
+
+ESCALATION MATRIX
+Risk score >= 7 routes to human review with a recommended action set. Risk score
+below 7 may auto-close with a logged rationale. Any HIGH-weight regulatory
+deadline (e.g. SWIFT recall) forces human review regardless of score.
+
+CONFIDENCE GUIDANCE
+Confidence is HIGH when multiple independent high-weight signals corroborate and a
+close precedent exists. Confidence is LOW when the knowledge base returns no
+relevant precedent — in that case degrade gracefully and recommend manual review.
