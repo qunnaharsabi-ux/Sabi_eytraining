@@ -1,0 +1,20 @@
+# secrets
+.env
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# data / runtime
+logs/*.jsonl
+chroma_db/
+*.db
+.rag_index.json
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,43 @@
+# =============================================================================
+# FIAA — Fraud Intelligence AI Assistant · Python dependencies
+# Python 3.10+   ·   install with:   pip install -r requirements.txt
+# =============================================================================
+
+# ---- Web UI & API -----------------------------------------------------------
+streamlit>=1.39,<2.0
+fastapi>=0.111,<1.0
+uvicorn[standard]>=0.30,<1.0
+
+# ---- Configuration ----------------------------------------------------------
+pydantic>=2.7,<3.0
+pydantic-settings>=2.3,<3.0
+python-dotenv>=1.0,<2.0
+
+# ---- Agent orchestration ----------------------------------------------------
+langgraph>=0.2,<1.0
+langchain-core>=0.2,<1.0
+
+# ---- LLM inference (Groq — Llama 3.3 70B + fallback chain) -------------------
+groq>=0.9,<1.0
+
+# ---- Vector database + embeddings -------------------------------------------
+chromadb>=0.5,<2.0
+sentence-transformers>=3.0,<6.0
+
+# ---- Web search -------------------------------------------------------------
+tavily-python>=0.3,<1.0
+
+# ---- PDF reading (Reader agent) ---------------------------------------------
+PyMuPDF>=1.24,<2.0
+
+# ---- Observability: structured logging · metrics · tracing ------------------
+structlog>=24.1,<25.0
+prometheus-client>=0.20,<1.0
+opentelemetry-api>=1.25,<2.0
+opentelemetry-sdk>=1.25,<2.0
+
+# ---- LangSmith tracing (optional) -------------------------------------------
+langsmith>=0.1,<1.0
+
+# ---- HTTP (webhook self-test client used by the dashboard) ------------------
+requests>=2.31,<3.0
