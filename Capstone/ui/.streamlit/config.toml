@@ -1,0 +1,19 @@
+# FIAA dashboard — Streamlit base theme.
+# The app ships its own full CSS (ui_kit.css); these values keep Streamlit's
+# own chrome (menus, widgets, spinners) consistent with the dark SOC theme.
+
+[theme]
+base = "dark"
+primaryColor = "#22d3ee"
+backgroundColor = "#0b0f1a"
+secondaryBackgroundColor = "#121829"
+textColor = "#e6edf7"
+font = "sans serif"
+
+[server]
+headless = true
+runOnSave = false
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false

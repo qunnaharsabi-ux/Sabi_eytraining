@@ -1,0 +1,74 @@
+# =============================================================================
+# FIAA — Fraud Intelligence AI Assistant · full stack
+# -----------------------------------------------------------------------------
+#   docker compose up -d        # start everything in the background
+#   docker compose logs -f app  # follow app logs
+#   docker compose down         # stop
+#
+#  Services:  app · chroma · prometheus · grafana
+#  All API keys come from the .env file (env_file below) — never the UI.
+# =============================================================================
+services:
+
+  # ---- 1. FIAA application (Streamlit + FastAPI + metrics) -------------------
+  app:
+    build: .
+    container_name: fiaa_app
+    env_file: .env
+    ports:
+      - "8501:8501"   # Streamlit dashboard
+      - "8001:8001"   # FastAPI webhook
+      - "8000:8000"   # Prometheus metrics
+    environment:
+      - CHROMA_DIR=/app/chroma_db
+      - LOGS_DIR=/app/logs
+    volumes:
+      - chroma_db:/app/chroma_db
+      - logs:/app/logs
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  # ---- 2. ChromaDB vector database ------------------------------------------
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: fiaa_chroma
+    ports:
+      - "8002:8000"
+    volumes:
+      - chroma_db:/chroma/.chroma
+    restart: unless-stopped
+
+  # ---- 3. Prometheus --------------------------------------------------------
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: fiaa_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./alert_rules.yml:/etc/prometheus/alert_rules.yml:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  # ---- 4. Grafana -----------------------------------------------------------
+  grafana:
+    image: grafana/grafana:latest
+    container_name: fiaa_grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=fiaa2025
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    restart: unless-stopped
+
+volumes:
+  chroma_db:
+  logs:
+  grafana_data:

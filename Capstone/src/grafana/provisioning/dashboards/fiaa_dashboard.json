@@ -1,0 +1,72 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "graphTooltip": 0,
+  "title": "FIAA — Fraud Intelligence AI Assistant",
+  "uid": "fiaa-main",
+  "schemaVersion": 39,
+  "version": 1,
+  "time": { "from": "now-30m", "to": "now" },
+  "refresh": "5s",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Active investigations",
+      "gridPos": { "h": 6, "w": 6, "x": 0, "y": 0 },
+      "targets": [{ "expr": "fiaa_active_runs", "refId": "A" }],
+      "fieldConfig": { "defaults": { "color": { "mode": "thresholds" } } }
+    },
+    {
+      "type": "stat",
+      "title": "Last risk score",
+      "gridPos": { "h": 6, "w": 6, "x": 6, "y": 0 },
+      "targets": [{ "expr": "fiaa_last_risk_score", "refId": "A" }],
+      "fieldConfig": {
+        "defaults": {
+          "min": 0, "max": 10,
+          "thresholds": { "steps": [
+            { "color": "green", "value": null },
+            { "color": "orange", "value": 5 },
+            { "color": "red", "value": 7 }
+          ] }
+        }
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "Agent calls / sec by status",
+      "gridPos": { "h": 6, "w": 12, "x": 12, "y": 0 },
+      "targets": [{ "expr": "sum by (status) (rate(fiaa_agent_calls_total[1m]))", "refId": "A" }]
+    },
+    {
+      "type": "timeseries",
+      "title": "Agent latency P95 (s)",
+      "gridPos": { "h": 7, "w": 12, "x": 0, "y": 6 },
+      "targets": [{ "expr": "histogram_quantile(0.95, sum by (le, agent) (rate(fiaa_agent_latency_seconds_bucket[5m])))", "refId": "A" }]
+    },
+    {
+      "type": "timeseries",
+      "title": "Pipeline latency P95 (s)",
+      "gridPos": { "h": 7, "w": 12, "x": 12, "y": 6 },
+      "targets": [{ "expr": "histogram_quantile(0.95, sum by (le) (rate(fiaa_pipeline_latency_seconds_bucket[5m])))", "refId": "A" }]
+    },
+    {
+      "type": "timeseries",
+      "title": "LLM tokens / sec",
+      "gridPos": { "h": 7, "w": 8, "x": 0, "y": 13 },
+      "targets": [{ "expr": "sum by (agent) (rate(fiaa_llm_tokens_total_sum[1m]))", "refId": "A" }]
+    },
+    {
+      "type": "timeseries",
+      "title": "Guardrail hits / sec by type",
+      "gridPos": { "h": 7, "w": 8, "x": 8, "y": 13 },
+      "targets": [{ "expr": "sum by (type) (rate(fiaa_guardrail_hits_total[1m]))", "refId": "A" }]
+    },
+    {
+      "type": "timeseries",
+      "title": "Supervisor iterations",
+      "gridPos": { "h": 7, "w": 8, "x": 16, "y": 13 },
+      "targets": [{ "expr": "rate(fiaa_supervisor_iterations_sum[5m]) / rate(fiaa_supervisor_iterations_count[5m])", "refId": "A" }]
+    }
+  ]
+}
