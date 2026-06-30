@@ -1,0 +1,43 @@
+# alert_rules.yml — the five Grafana/Prometheus alert rules from the design.
+# Loaded by Prometheus (rule_files in prometheus.yml); Grafana reads them too.
+
+groups:
+  - name: fiaa_alerts
+    rules:
+      - alert: HighWriterLatency
+        expr: histogram_quantile(0.95, rate(fiaa_agent_latency_seconds_bucket{agent="report_agent"}[5m])) > 30
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Report agent P95 latency above 30s"
+
+      - alert: InjectionSpike
+        expr: rate(fiaa_guardrail_hits_total{type="injection"}[1m]) > 5
+        labels:
+          severity: critical
+        annotations:
+          summary: "Prompt-injection attempts spiking (>5/min)"
+
+      - alert: HighErrorRate
+        expr: rate(fiaa_agent_calls_total{status="error"}[5m]) / rate(fiaa_agent_calls_total[5m]) > 0.1
+        labels:
+          severity: critical
+        annotations:
+          summary: "Agent error rate above 10%"
+
+      - alert: TooManyActiveRuns
+        expr: fiaa_active_runs > 10
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "More than 10 concurrent investigations"
+
+      - alert: LowRagasFaithfulness
+        expr: fiaa_ragas_faithfulness < 0.7
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "RAGAS faithfulness below 0.7 for 3 consecutive runs"

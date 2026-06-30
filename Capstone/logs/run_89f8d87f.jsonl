@@ -1,0 +1,29 @@
+{"timestamp": "2026-06-29T15:58:19.985575Z", "run_id": "89f8d87f", "event": "pipeline.start", "level": "info", "alert_id": "FR-PII-9185", "trigger_len": 264, "env": "dev"}
+{"timestamp": "2026-06-29T15:58:20.001242Z", "run_id": "89f8d87f", "event": "guardrail.pii_redacted", "level": "warning", "fields": ["email", "mobile", "pan"]}
+{"timestamp": "2026-06-29T15:58:21.047612Z", "run_id": "89f8d87f", "event": "incident.parsed", "level": "info", "category": "wire_fraud", "amount": 487000.0}
+{"timestamp": "2026-06-29T15:58:21.048613Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "incident_agent", "duration_s": 1.024, "tokens": 373}
+{"timestamp": "2026-06-29T15:58:21.298268Z", "run_id": "89f8d87f", "event": "supervisor.decision", "level": "info", "next": "SEARCH", "reason": "Initial case data received, live web intelligence is required", "iteration": 0}
+{"timestamp": "2026-06-29T15:58:21.298268Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.249, "tokens": 373}
+{"timestamp": "2026-06-29T15:58:25.341379Z", "run_id": "89f8d87f", "event": "search.done", "level": "info", "live": true, "query": "bank fraud wire_fraud Wire to <EMAIL_REDACTED> mobile <MOBILE_REDACTED> PAN <PAN_REDACTED> RBI SWIFT recall regulatory d"}
+{"timestamp": "2026-06-29T15:58:25.342384Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "search_agent", "duration_s": 4.037, "tokens": 1247}
+{"timestamp": "2026-06-29T15:58:25.620258Z", "run_id": "89f8d87f", "event": "supervisor.decision", "level": "info", "next": "RAG", "reason": "SEARCH has already run", "iteration": 1}
+{"timestamp": "2026-06-29T15:58:25.621261Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.275, "tokens": 1247}
+{"timestamp": "2026-06-29T15:58:47.468591Z", "run_id": "89f8d87f", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3360", "similarity": 0.636, "source": "past_case"}
+{"timestamp": "2026-06-29T15:58:47.469595Z", "run_id": "89f8d87f", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3370", "similarity": 0.623, "source": "past_case"}
+{"timestamp": "2026-06-29T15:58:47.469595Z", "run_id": "89f8d87f", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3373", "similarity": 0.619, "source": "past_case"}
+{"timestamp": "2026-06-29T15:58:47.470593Z", "run_id": "89f8d87f", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3359", "similarity": 0.611, "source": "past_case"}
+{"timestamp": "2026-06-29T15:58:47.471593Z", "run_id": "89f8d87f", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3385", "similarity": 0.588, "source": "past_case"}
+{"timestamp": "2026-06-29T15:58:48.079935Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "rag_agent", "duration_s": 22.456, "tokens": 819}
+{"timestamp": "2026-06-29T15:58:48.246681Z", "run_id": "89f8d87f", "event": "supervisor.decision", "level": "info", "next": "READER", "reason": "A document was uploaded and READER has not run yet", "iteration": 2}
+{"timestamp": "2026-06-29T15:58:48.247675Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.165, "tokens": 819}
+{"timestamp": "2026-06-29T15:58:48.249678Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "reader_agent", "duration_s": 0.0, "tokens": 0}
+{"timestamp": "2026-06-29T15:58:48.540519Z", "run_id": "89f8d87f", "event": "supervisor.decision", "level": "info", "next": "WRITE", "reason": "All initial agents have run.", "iteration": 3}
+{"timestamp": "2026-06-29T15:58:48.541514Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.289, "tokens": 0}
+{"timestamp": "2026-06-29T15:58:49.913588Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "report_agent", "risk_score": 8.5, "tokens": 1706}
+{"timestamp": "2026-06-29T15:58:49.914591Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "report_agent", "duration_s": 1.371, "tokens": 1706}
+{"timestamp": "2026-06-29T15:58:50.331405Z", "run_id": "89f8d87f", "event": "evaluator.decision", "level": "info", "approved": true, "score": 8.5, "flags": []}
+{"timestamp": "2026-06-29T15:58:50.332419Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "evaluator_agent", "duration_s": 0.416, "tokens": 1605}
+{"timestamp": "2026-06-29T15:58:50.334409Z", "run_id": "89f8d87f", "event": "supervisor.decision", "level": "info", "next": "END", "reason": "Evaluator approved the report", "iteration": 4}
+{"timestamp": "2026-06-29T15:58:50.335405Z", "run_id": "89f8d87f", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.001, "tokens": 1605}
+{"timestamp": "2026-06-29T15:58:50.346405Z", "run_id": "89f8d87f", "event": "ragas.scored", "level": "info", "claims": 11, "faithfulness": 0.946, "answer_relevance": 0.95, "context_recall": 0.815}
+{"timestamp": "2026-06-29T15:58:50.347405Z", "run_id": "89f8d87f", "event": "pipeline.complete", "level": "info", "iterations": 5, "total_tokens": 1706, "risk_score": 8.5, "duration_s": 30.35, "approved": true, "decision": "human_review"}

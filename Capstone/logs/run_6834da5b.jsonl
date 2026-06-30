@@ -1,0 +1,24 @@
+{"timestamp": "2026-06-29T14:16:49.072361Z", "run_id": "6834da5b", "event": "pipeline.start", "level": "info", "alert_id": "FR-2025-8822", "trigger_len": 179, "env": "dev"}
+{"timestamp": "2026-06-29T14:16:49.308260Z", "run_id": "6834da5b", "event": "incident.parsed", "level": "info", "category": "card_fraud", "amount": 12500}
+{"timestamp": "2026-06-29T14:16:49.310256Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "incident_agent", "duration_s": 0.235, "tokens": 309}
+{"timestamp": "2026-06-29T14:16:49.499531Z", "run_id": "6834da5b", "event": "supervisor.decision", "level": "info", "next": "SEARCH", "reason": "Initial run to gather live web intelligence", "iteration": 0}
+{"timestamp": "2026-06-29T14:16:49.503400Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.192, "tokens": 309}
+{"timestamp": "2026-06-29T14:16:53.312502Z", "run_id": "6834da5b", "event": "search.done", "level": "info", "live": true, "query": "bank fraud card_fraud domestic RBI SWIFT recall regulatory deadline new_device"}
+{"timestamp": "2026-06-29T14:16:53.313510Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "search_agent", "duration_s": 3.808, "tokens": 1017}
+{"timestamp": "2026-06-29T14:16:53.533153Z", "run_id": "6834da5b", "event": "supervisor.decision", "level": "info", "next": "RAG", "reason": "SEARCH has already run", "iteration": 1}
+{"timestamp": "2026-06-29T14:16:53.534146Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.218, "tokens": 1017}
+{"timestamp": "2026-06-29T14:16:53.762320Z", "run_id": "6834da5b", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3346", "similarity": 0.678, "source": "past_case"}
+{"timestamp": "2026-06-29T14:16:53.763333Z", "run_id": "6834da5b", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3337", "similarity": 0.654, "source": "past_case"}
+{"timestamp": "2026-06-29T14:16:53.764329Z", "run_id": "6834da5b", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3391", "similarity": 0.64, "source": "past_case"}
+{"timestamp": "2026-06-29T14:16:53.765777Z", "run_id": "6834da5b", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3358", "similarity": 0.633, "source": "past_case"}
+{"timestamp": "2026-06-29T14:16:53.766777Z", "run_id": "6834da5b", "event": "rag_agent.chunk", "level": "info", "case_id": "FR-2024-3367", "similarity": 0.594, "source": "past_case"}
+{"timestamp": "2026-06-29T14:16:54.399584Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "rag_agent", "duration_s": 0.864, "tokens": 756}
+{"timestamp": "2026-06-29T14:16:54.672245Z", "run_id": "6834da5b", "event": "supervisor.decision", "level": "info", "next": "READER", "reason": "A document was uploaded and READER has not run yet", "iteration": 2}
+{"timestamp": "2026-06-29T14:16:54.672245Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.278, "tokens": 756}
+{"timestamp": "2026-06-29T14:16:54.672245Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "reader_agent", "duration_s": 0.0, "tokens": 0}
+{"timestamp": "2026-06-29T14:16:54.987829Z", "run_id": "6834da5b", "event": "supervisor.decision", "level": "info", "next": "WRITE", "reason": "All initial agents have run.", "iteration": 3}
+{"timestamp": "2026-06-29T14:16:54.988810Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "supervisor", "duration_s": 0.303, "tokens": 0}
+{"timestamp": "2026-06-29T14:16:56.309154Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "report_agent", "risk_score": 8.2, "tokens": 1524}
+{"timestamp": "2026-06-29T14:16:56.310145Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "report_agent", "duration_s": 1.319, "tokens": 1524}
+{"timestamp": "2026-06-29T14:16:57.013409Z", "run_id": "6834da5b", "event": "evaluator.decision", "level": "info", "approved": true, "score": 8.2, "flags": []}
+{"timestamp": "2026-06-29T14:16:57.015621Z", "run_id": "6834da5b", "event": "agent.success", "level": "info", "agent": "evaluator_agent", "duration_s": 0.704, "tokens": 1421}
