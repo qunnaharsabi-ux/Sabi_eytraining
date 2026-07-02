@@ -1,0 +1,103 @@
+---
+
+# Playbook 4 — Adding a New Observability Metric
+
+**Purpose:** Add a new Prometheus metric to FIAA and surface it in Grafana / the dashboard.
+**Audience:** Developer extending observability.
+**Where metrics live:** `monitoring/metrics.py` (all metrics are prefixed `fiaa_`), exposed on `:8000/metrics`, scraped by Prometheus, visualised in Grafana and the Streamlit Monitoring tab.
+
+---
+
+## Background — the existing metrics
+
+| Metric | Type | Meaning |
+|---|---|---|
+| `fiaa_agent_calls_total` | Counter | Calls per agent (labels: agent, status) |
+| `fiaa_agent_latency_seconds` | Histogram | Latency per agent |
+| `fiaa_llm_tokens_total` | Histogram | Tokens per agent |
+| `fiaa_guardrail_hits_total` | Counter | Guardrail hits (labels: type, severity) |
+| `fiaa_pipeline_latency_seconds` | Histogram | End-to-end pipeline latency |
+| `fiaa_last_risk_score` | Gauge | Most recent risk score |
+| `fiaa_active_runs` | Gauge | Concurrent pipelines |
+| `fiaa_ragas_faithfulness` | Gauge | Latest RAGAS faithfulness |
+
+Choose the right type:
+- **Counter** — only goes up (counts of events). e.g. total STR filings.
+- **Gauge** — goes up and down (a current value). e.g. queue depth.
+- **Histogram** — distribution (percentiles, averages). e.g. a duration.
+
+## Step 1 — Define the metric
+
+In `monitoring/metrics.py`, next to the existing definitions, add your metric (keep the `fiaa_` prefix):
+```python
+# Example: count how many cases an analyst resolves, by outcome
+CASE_RESOLUTIONS = Counter(
+    "fiaa_case_resolutions_total", "Analyst case resolutions", ["outcome"]
+)
+```
+
+## Step 2 — Add a helper to record it
+
+Still in `monitoring/metrics.py`, add a small guarded function (matching the existing `record_*` style so it never crashes if prometheus_client is absent):
+```python
+def record_case_resolution(outcome: str) -> None:
+    if not _PROM:
+        return
+    try:
+        CASE_RESOLUTIONS.labels(outcome=outcome).inc()
+    except Exception:
+        pass
+```
+
+## Step 3 — Call it where the event happens
+
+Import and call the helper at the point the event occurs. Example — when an analyst resolves a case (in `core/store.py`'s `set_case_action`, or in `app.py`):
+```python
+from monitoring import metrics
+metrics.record_case_resolution(outcome)   # "confirmed_fraud" | "false_positive" | "escalated"
+```
+
+## Step 4 — (Optional) surface it in the dashboard snapshot
+
+If you want it on the Streamlit Monitoring tab, add it to `snapshot()` in `monitoring/metrics.py` and render it in `app.py`'s Monitoring tab like the existing tiles.
+
+## Step 5 — Verify the metric is exported
+
+Restart/rebuild, fire the relevant event, then:
+```
+# the raw metric should now appear
+Invoke-RestMethod -Uri "http://<VM_IP>:8000/metrics" | Select-String "fiaa_case_resolutions_total"
+```
+
+## Step 6 — Confirm Prometheus scrapes it
+
+- Open `http://<VM_IP>:9090` → query `fiaa_case_resolutions_total` → a value should appear.
+- Check the target is UP at `http://<VM_IP>:9090/targets`.
+
+## Step 7 — Add a Grafana panel
+
+1. Grafana → your FIAA dashboard → **Add → Visualization**.
+2. Data source: Prometheus.
+3. Query, e.g.: `sum by (outcome) (fiaa_case_resolutions_total)`.
+4. Pick a visualisation (stat, time series, bar), title it, **Save dashboard**.
+
+> Important: Grafana panels must query the exact metric name **including the `fiaa_` prefix**. A panel querying an un-prefixed name (e.g. `case_resolutions_total`) will show "No data".
+
+## Step 8 — (Optional) Add an alert rule
+
+In `alert_rules.yml`, add a rule referencing the new metric, e.g. alert if false-positive rate spikes. Reload Prometheus after editing.
+
+## Deploy the change
+
+- Local: restart `python start.py`.
+- Docker/Azure: `docker compose up -d --build` (or push to `main` for CI/CD).
+
+## Checklist
+
+- [ ] Metric defined with `fiaa_` prefix and correct type
+- [ ] Guarded `record_*` helper added
+- [ ] Helper called at the event site
+- [ ] Appears at `:8000/metrics`
+- [ ] Queryable in Prometheus
+- [ ] Panel added in Grafana (using the prefixed name)
+- [ ] Deployed via rebuild / CI-CD
